@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="s_app_name">WhatNext</string>
+    <string name="sa_pause">Aufgabe pausieren</string>
+    <string name="sa_edit_task">Aufgabe bearbeiten</string>
+    <string name="sa_complete">Als fertig makieren</string>
+    <string name="sa_delete_task">Aufgabe löschen</string>
+    <string name="sa_continue">Fortsetzen</string>
+    <string name="sa_delete">Löschen</string>
+    <string name="sa_new_category">Neue Kategorie</string>
+    <string name="sa_edit_category">Name Bearbeiten</string>
+    <string name="sa_run">Arbeit starten</string>
+    <string name="sa_choose_categories">Kategorien auswählen</string>
+    <string name="sa_save">Speichern</string>
+    <string name="sa_pause_save">Pause+Speichern</string>
+    <string name="sl_due">Fällig:</string>
+    <string name="sa_filter">Filter</string>
+    <string name="sl_category">Kategorien:</string>
+    <string name="sl_progress_short">Fortschritt [%]:</string>
+    <string name="sl_progress_long">Arbeitsfortschritt [%]:</string>
+    <string name="sl_duration">Dauer [h]:</string>
+    <string name="sl_estimated">Geschätzt</string>
+    <string name="sl_actual">Tatsächlich</string>
+    <string name="sl_timediff">Zeit seit beginn:</string>
+    <string name="sl_tname">Name:</string>
+    <string name="sl_start">Start:</string>
+    <string name="sl_desc">Beschreibung:</string>
+    <string name="sl_loc">Ort:</string>
+    <string name="sl_prio">Priorität:</string>
+    <string name="sl_more">Mehr</string>
+    <string name="sl_yes">Ja!</string>
+    <string name="sl_ok">OK</string>
+    <string name="sl_no">Nein!</string>
+    <string name="sl_due_in">fällig in</string>
+    <string name="sl_reminder">Erinnerungen (vor Fällig)</string>
+    <string name="s_question_pause_save">Arbeit pausieren und mit diesen Daten speichern?</string>
+    <string name="err_no_name">Kein Name angegeben!</string>
+    <string name="err_start_date">Ungültiger Beginn!</string>
+    <string name="err_will_miss_deadline">Aufgabe kann unter den gegebenen Annahmen nicht vor Fälligkeit bewältigt werden</string>
+    <string name="hint_no_name">Bitte geben Sie einen Namen ein.</string>
+    <string name="hint_start_date">Der Beginn muss vor der Fälligkeit liegen.</string>
+    <string name="confirm_delete_task">Wollen Sie diese Aufgabe wirklich löschen?</string>
+    <string name="confirm_delete_category">Wollen Sie diese Kategorie wirklich löschen?
+	</string>
+    <string-array name="TimeUnits">
+        <item>Minute(n)</item>
+        <item>Stunde(n)</item>
+        <item>Tag(e)</item>
+        <item>Woche(n)</item>
+        <item>Monat(e)</item>
+    </string-array>
+    <string name="sa_share">Versenden</string>
+    <string name="sa_new">Neu</string>
+    <string name="sa_new_task">Neue Aufgabe</string>
+    <string name="sa_expand">zeige mehr</string>
+    <string name="sa_to_list">zur Aufgabenliste</string>
+    <string name="sl_from_subtasks">Summiere sub-tasks</string>
+    <string name="separator">--------</string>
+    <string name="s_nothing_todo">Nichts zu tun? </string>
+    <string-array name="DefaultCategories">
+        <item>Beruf</item>
+        <item>Familie</item>
+        <item>Einkauf</item>
+    </string-array>
+    <string-array name="TaskPriorities">
+        <item>Sehr Wichtig</item>
+        <item>Wichtig</item>
+        <item>Mittel</item>
+        <item>Niedrig</item>
+    </string-array>
+    <string name="shared_user_label">de.ruschival</string>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TaskListItem"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:layout_marginTop="2dip"
+    android:paddingTop="5dip" >
+
+    <ImageView
+        android:id="@+id/taskStateBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/play"
+        android:background="@drawable/progressbackground_00">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/taskName"
+        style="@style/TaskName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/taskStateBtn"
+        android:ellipsize="start"
+        android:maxLines="1" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/dueLabel"
+        style="@style/SecondRowLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/taskStateBtn"
+        android:layout_toRightOf="@id/taskStateBtn"
+        android:text="@string/sl_due" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/dueDate"
+        style="@style/SecondRowValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dueLabel"
+        android:layout_toRightOf="@id/dueLabel"
+        >
+    </TextView>
+  
+    <TextView
+        android:id="@+id/slack"
+        style="@style/SecondRowValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dueLabel"
+        android:layout_toRightOf="@id/dueDate"
+         >
+    </TextView>
+        
+    <TextView
+        android:id="@+id/progressLabel"
+        style="@style/SecondRowLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dueLabel"
+        android:layout_toLeftOf="@+id/progress"
+        android:text="@string/sl_progress_short" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/progress"
+        style="@style/SecondRowValue"
+        android:layout_width="32sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dueLabel"
+        android:layout_alignParentRight="true"
+        android:paddingRight="3dp" >
+    </TextView>
+
+</RelativeLayout>

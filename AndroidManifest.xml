@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.ruschival.WhatNext"
+    android:installLocation="auto"
+    android:sharedUserId="de.ruschival.WhatNext"
+    android:sharedUserLabel="@string/shared_user_label"
+    android:versionCode="4"
+    android:versionName="1.2.1" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="10" />
+
+    <application
+        android:allowClearUserData="true"
+        android:icon="@drawable/icon"
+        android:label="@string/s_app_name"
+        android:theme="@android:style/Theme.Black" >
+
+        <!-- Main List -->
+        <activity
+            android:name="de.ruschival.WhatNext.ui.TaskListActivity"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Pause Dialog -->
+        <activity
+            android:name=".ui.PauseDialogActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/sa_pause"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:theme="@style/DialogLikeActivity" >
+        </activity>
+
+        <!-- Edit Task -->
+        <activity
+            android:name=".ui.TaskEditActivity"
+            android:icon="@drawable/ic_menu_edit"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- Show Task Details -->
+        <activity
+            android:name=".ui.TaskShowActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <!-- <activity android:name="com.google.ads.AdActivity"/> -->
+
+
+        <!-- Reminder Service -->
+        <service
+            android:name=".reminder.ReminderService"
+            android:enabled="true" />
+
+        <!-- Data Provider Service -->
+        <service
+            android:name=".db.TaskDBService"
+            android:enabled="true" />
+
+        <!-- Service to update Widgets -->
+        <service android:name=".WidgetDataService" />
+
+        <!-- Event Receiver for Reminder -->
+        <receiver
+            android:name=".reminder.ReminderEventReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="de.ruschival.WhatNext.reminder.REMINDER_EVENT_ACTION" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".WidgetListProvider"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="de.ruschival.WhatNext.Widgets.FORCE_UPDATE" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/view_widget_list" />
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/categoryDialogLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/dialogLabel"
+        style="@style/WindowTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_toLeftOf="@+id/newCategoryBtn"
+        android:ellipsize="middle"
+        android:saveEnabled="true"
+        android:text="@string/sl_category" />
+
+    <ImageButton
+        android:id="@+id/newCategoryBtn"
+        style="@style/PlusButton"
+        android:contentDescription="@string/sa_new_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" >
+    </ImageButton>
+
+    <ListView
+        android:id="@+id/categoryList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/dialogBtn"
+        android:layout_below="@+id/dialogLabel" >
+    </ListView>
+
+    <Button
+        android:id="@+id/dialogBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:minWidth="80dp"
+        android:text="@string/sl_ok" />
+
+</RelativeLayout>

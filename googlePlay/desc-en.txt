@@ -1,0 +1,12 @@
+WhatNext is a simple, yet not too simple to-do list that helps you to keep track of your task.
+It features what most other todo lists also offer but tries to hide less-used features.
+Key Features are:
+-Time tracking for self control and better estimation - record time you spent on each task
+- Dynamic scheduling based on "Least Laxity Scheduling" - take care for the most urgent things first
+- Check schedulability - WhatNext tells you if your assumptions can be fulfilled
+- Reminders: even if you forget a deadline, WhatNext will keep you aware!
+- Share your tasks - RFC5545 compliant iCalendar exports as VEVENT or VTODO
+- Organise tasks in categories - filter and group your task
+
+
+If you feel you definitely need some feature, please pass me an email and I will think about it.

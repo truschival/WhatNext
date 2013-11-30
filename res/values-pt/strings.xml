@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="s_app_name">WhatNext</string>
+    <string name="sa_pause">Pausar tarefa</string>
+    <string name="sa_edit_task">Editar Tarefa</string>
+    <string name="sa_complete">Marcar completo</string>
+    <string name="sa_delete_task">Apagar tarefa</string>
+    <string name="sa_continue">Continuar</string>
+    <string name="sa_delete">Apagar</string>
+    <string name="sa_new_category">Nova Categoria</string>
+    <string name="sa_edit_category">Editar Nome</string>
+    <string name="sa_run">Começar Trabalho</string>
+    <string name="sa_choose_categories">Selecione Categorias</string>
+    <string name="sa_save">Salvar</string>
+    <string name="sa_pause_save">Parar+Salvar</string>
+    <string name="sa_filter">Selecione</string>
+    <string name="sl_due">Vencimento:</string>
+    <string name="sl_category">Categoria:</string>
+    <string name="sl_progress_short">Progresso [%]:</string>
+    <string name="sl_progress_long">Progresso da tarefa [%]:</string>
+    <string name="sl_duration">Duração [h]:</string>
+    <string name="sl_estimated">Estimado</string>
+    <string name="sl_actual">Efetivo</string>
+    <string name="sl_timediff">Tempo desde inicio:</string>
+    <string name="sl_tname">Nome:</string>
+    <string name="sl_start">Inicio:</string>
+    <string name="sl_desc">Descrição:</string>
+    <string name="sl_loc"> Lugar:</string>
+    <string name="sl_prio">Prioridade:</string>
+    <string name="sl_more">Mais</string>
+    <string name="sl_yes">Sim!</string>
+    <string name="sl_ok">OK</string>
+    <string name="sl_no">Não!</string>
+    <string name="sl_due_in">vence em</string>
+    <string name="sl_reminder">Lembretes (antes vencimento)</string>
+    <string name="s_question_pause_save">Arbeit pausieren und mit diesen Daten speichern?</string>
+    <string name="err_no_name">Falta de nome</string>
+    <string name="err_start_date">Inicio invalido!</string>
+    <string name="err_will_miss_deadline">Com as estimativas a Tarefa não concluirá no prazo!</string>
+    <string name="hint_no_name">Por favor preenche o nome.</string>
+    <string name="hint_start_date">O inicio deve estar antes do vencimento</string>
+    <string name="confirm_delete_task">Realmente apagar esta tarefa?</string>
+    <string name="confirm_delete_category">Realmente apagar esta categoria?	</string>
+    <string-array name="TimeUnits">
+        <item>minuto(s)</item>
+        <item>hora(s)</item>
+        <item>dia(s)</item>
+        <item>semana(s)</item>
+        <item>mese(s)</item>
+    </string-array>
+    <string name="sa_share">Compartilhar</string>
+    <string name="sa_new">novo</string>
+    <string name="sa_new_task">nova tarefa</string>
+    <string name="sa_to_list">ira para lista</string>
+    <string name="sa_expand">mostra mais</string>
+    <string name="sl_from_subtasks">accumula sub-tarefas</string>
+    <string name="separator">--------</string>
+    <string name="s_nothing_todo">Nada para fazer?	</string>
+    <string-array name="DefaultCategories">
+        <item>trabalho</item>
+        <item>familia</item>
+        <item>Compras</item>
+    </string-array>
+    <string-array name="TaskPriorities">
+        <item>Muito Importante</item>
+        <item>Importante</item>
+        <item>Medio</item>
+        <item>Baixo</item>
+    </string-array>
+    <string name="shared_user_label">de.ruschival</string>
+</resources>

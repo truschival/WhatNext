@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top" >
+
+            <!-- Task Name -->
+
+            <EditText
+                android:id="@+id/taskName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:hint="@string/sl_tname"
+                android:inputType="textCapSentences|textImeMultiLine" >
+            </EditText>
+
+            <!-- Start -->
+
+            <TextView
+                android:id="@+id/startLabel"
+                style="@style/EditLabel"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/startDate"
+                android:layout_alignParentLeft="true"
+                android:text="@string/sl_start" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/startDate"
+                android:layout_width="115sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/taskName"
+                android:layout_toLeftOf="@+id/startTime"
+                android:clickable="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="date" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/startTime"
+                android:layout_width="65sp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/startDate"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="time" >
+            </EditText>
+
+            <!-- Due Date -->
+
+            <TextView
+                android:id="@+id/dueLabel"
+                style="@style/EditLabel"
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/dueDate"
+                android:layout_alignParentLeft="true"
+                android:text="@string/sl_due" >
+            </TextView>
+
+            <CheckBox
+                android:id="@+id/checkDue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/dueDate"
+                android:layout_toRightOf="@+id/dueLabel"
+                android:checked="true" />
+
+            <EditText
+                android:id="@+id/dueDate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/startDate"
+                android:layout_alignRight="@+id/startDate"
+                android:layout_below="@+id/startDate"
+                android:clickable="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="date" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/dueTime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/startTime"
+                android:layout_alignRight="@+id/startTime"
+                android:layout_alignTop="@+id/dueDate"
+                android:clickable="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="time" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/separator0"
+                style="@style/Separator"
+                android:layout_below="@+id/dueDate"
+                android:contentDescription="@string/separator"
+                android:src="@android:drawable/divider_horizontal_dim_dark" />
+<!--  
+            <TextView
+                android:id="@+id/accumulateLabel"
+                style="@style/EditLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/checkAccumulate"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/startDate"
+                android:maxLines="2"
+                android:scrollHorizontally="false"
+                android:text="@string/sl_from_subtasks" />
+
+            <CheckBox
+                android:id="@+id/checkAccumulate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/startDate"
+                android:layout_below="@+id/dueDate"
+                android:checked="false" />
+-->
+            <TextView
+                android:id="@+id/durationLabel"
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/wcet"
+                android:text="@string/sl_duration" />
+
+            <TextView
+                android:id="@+id/wcetLabel"
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/wcet"
+                android:layout_below="@+id/wcet"
+                android:layout_marginTop="-6sp"
+                android:text="@string/sl_estimated"
+                android:textSize="12sp" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/wcet"
+                android:layout_width="90sp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/startDate"
+                android:layout_below="@+id/separator0"
+                android:gravity="right"
+                android:inputType="numberDecimal"
+                android:maxLength="6" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/lab_actual"
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/wcetLabel"
+                android:layout_alignRight="@+id/actual"
+                android:gravity="center_vertical"
+                android:text="@string/sl_actual"
+                android:textSize="12sp" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/actual"
+                android:layout_width="90sp"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/startTime"
+                android:layout_alignTop="@+id/wcet"
+                android:gravity="right"
+                android:inputType="numberDecimal"
+                android:maxLength="6" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/progLabel"
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/wcet"
+                android:text="@string/sl_progress_short" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/progress"
+                style="@style/EditLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/progLabel"
+                android:layout_toLeftOf="@+id/wcet"
+                android:layout_toRightOf="@+id/progLabel"
+                android:text="" >
+            </TextView>
+
+            <SeekBar
+                android:id="@+id/progSeek"
+                style="@style/SeekBar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/progLabel"
+                android:max="100"
+                android:saveEnabled="true" >
+            </SeekBar>
+
+            <ImageView
+                android:id="@+id/separator2"
+                style="@style/Separator"
+                android:layout_below="@+id/progSeek"
+                android:contentDescription="@string/separator"
+                android:src="@android:drawable/divider_horizontal_dim_dark" />
+            <!-- Priority -->
+
+            <ImageView
+                android:id="@+id/moreExpander"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/separator2"
+                android:background="@drawable/expander_group"
+                android:contentDescription="@string/sa_expand" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/moreLabel"
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/moreExpander"
+                android:layout_toRightOf="@+id/moreExpander"
+                android:text="@string/sl_more" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/prioLabel"
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/prioSpin"
+                android:layout_alignParentLeft="true"
+                android:text="@string/sl_prio"
+                android:visibility="gone" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/prioSpin"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/moreExpander"
+                android:entries="@array/TaskPriorities"
+                android:paddingRight="5dp"
+                android:visibility="gone" >
+            </Spinner>
+
+            <TextView
+                android:id="@+id/categoryLabel"
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/categoryBtn"
+                android:layout_alignParentLeft="true"
+                android:text="@string/sl_category"
+                android:visibility="gone" >
+            </TextView>
+
+            <Button
+                android:id="@+id/categoryBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/prioSpin"
+                android:layout_alignRight="@+id/prioSpin"
+                android:layout_below="@+id/prioSpin"
+                android:visibility="gone" >
+            </Button>
+
+            <TextView
+                android:id="@+id/locationLabel"
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/location"
+                android:layout_alignParentLeft="true"
+                android:text="@string/sl_loc"
+                android:visibility="gone" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/location"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/prioSpin"
+                android:layout_alignRight="@+id/prioSpin"
+                android:layout_below="@+id/categoryBtn"
+                android:hint="@string/sl_loc"
+                android:visibility="gone" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/separator3"
+                style="@style/Separator"
+                android:layout_below="@+id/location"
+                android:contentDescription="@string/separator"
+                android:src="@android:drawable/divider_horizontal_dim_dark" />
+
+            <ImageView
+                android:id="@+id/reminderExpander"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/separator3"
+                android:background="@drawable/expander_group"
+                android:contentDescription="@string/sa_expand" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/reminderLabel"
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/reminderExpander"
+                android:layout_toRightOf="@+id/reminderExpander"
+                android:text="@string/sl_reminder" >
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/reminderListLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/reminderLabel"
+                android:layout_below="@+id/reminderLabel"
+                android:minHeight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <include
+                    android:id="@+id/newReminderRowLayout"
+                    layout="@layout/new_reminder" >
+                </include>
+            </LinearLayout>
+
+            <!-- description -->
+
+            <ImageView
+                android:id="@+id/separator4"
+                style="@style/Separator"
+                android:layout_below="@+id/reminderListLayout"
+                android:contentDescription="@string/separator"
+                android:src="@android:drawable/divider_horizontal_dim_dark" />
+
+            <EditText
+                android:id="@+id/taskDesc"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/separator4"
+                android:layout_marginTop="5dp"
+                android:gravity="left|top"
+                android:hint="@string/sl_desc"
+                android:inputType="textMultiLine"
+                android:textAppearance="@style/Flowtext" >
+            </EditText>
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/taskDesc"
+                android:text="@string/sa_save" >
+            </Button>
+
+          
+        </RelativeLayout>
+    </ScrollView>
+
+</merge>

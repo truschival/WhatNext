@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/ctxi_run"
+        android:icon="@drawable/ic_media_play"
+        android:title="@string/sa_run">
+    </item>
+
+    <item
+        android:id="@+id/ctxi_pause"
+        android:icon="@drawable/ic_media_pause"
+        android:title="@string/sa_pause">
+    </item>
+
+    <item
+        android:id="@+id/ctxi_edit"
+        android:icon="@drawable/ic_menu_edit"
+        android:title="@string/sa_edit_task">
+    </item>
+
+    <item
+        android:id="@+id/ctxi_mcomplete"
+        android:icon="@drawable/btn_check_on"
+        android:title="@string/sa_complete">
+    </item><item
+        android:id="@+id/ctxi_delete"
+        android:icon="@drawable/ic_menu_delete"
+        android:title="@string/sa_delete_task">
+    </item>
+    <item android:id="@+id/ctxi_share" android:icon="@drawable/ic_menu_share" android:title="@string/sa_share"></item>
+    
+
+</menu>

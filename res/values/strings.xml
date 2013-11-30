@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="s_app_name">WhatNext</string>
+    <string name="sa_pause">Pause Work</string>
+    <string name="sa_edit_task">Edit Task</string>
+    <string name="sa_complete">Mark Completed</string>
+    <string name="sa_delete_task">Delete Task</string>
+    <string name="sa_continue">Continue</string>
+    <string name="sa_delete">Delete</string>
+    <string name="sa_new_category">New Category</string>
+    <string name="sa_edit_category">Edit Name</string>
+    <string name="sa_run">Start Work</string>
+    <string name="sa_choose_categories">Choose categories</string>
+    <string name="sa_filter">Filter</string>
+    <string name="sa_save">Save</string>
+    <string name="sa_pause_save">Pause+Save</string>
+    <string name="sl_due">Due:</string>
+    <string name="sl_category">Categories:</string>
+    <string name="sl_progress_short">Progress [%]:</string>
+    <string name="sl_progress_long">Progress of work [%]:</string>
+    <string name="sl_duration">Duration [h]:</string>
+    <string name="sl_estimated">Estimated</string>
+    <string name="sl_actual">Actual</string>
+    <string name="sl_timediff">Time since resumed:</string>
+    <string name="sl_tname">Task Name:</string>
+    <string name="sl_start">Start:</string>
+    <string name="sl_desc">Description:</string>
+    <string name="sl_loc">Location:</string>
+    <string name="sl_prio">Priority:</string>
+    <string name="sl_more">More</string>
+    <string name="sl_yes">Yes!</string>
+    <string name="sl_ok">OK</string>
+    <string name="sl_no">No!</string>
+    <string name="sl_due_in">due in</string>
+    <string name="sl_reminder">Reminders (relative to due)</string>
+    <string name="s_question_pause_save">Stop and update task with this information?</string>
+    <string name="err_no_name">No task name!</string>
+    <string name="err_start_date">Invalid Start!</string>
+    <string name="err_will_miss_deadline">Task will miss deadline under given assumptions</string>
+    <string name="hint_no_name">Please provide a task name!</string>
+    <string name="hint_start_date">The start date/time date must be before due!
+	</string>
+    <string name="confirm_delete_task">Do you really want to delete this Task?</string>
+    <string name="confirm_delete_category">Do you really want to delete this Category?
+	</string>
+    <string-array name="TimeUnits">
+        <item>minute(s)</item>
+        <item>hour(s)</item>
+        <item>day(s)</item>
+        <item>weeks(s)</item>
+        <item>months(s)</item>
+    </string-array>
+    <string name="sa_share">Share</string>
+    <string name="sa_new">new</string>
+    <string name="sa_new_task">new task</string>
+    <string name="sa_to_list">Go to task list</string>
+    <string name="sa_expand">show more</string>
+    <item format="integer" name="default_reminder_time" type="integer">15</item>
+    <string name="separator">--------</string>
+    <string name="sl_from_subtasks">Accumulate from subtasks</string>
+    <string name="s_nothing_todo">Nothing to do?	</string>
+    <string-array name="DefaultCategories">
+        <item>work</item>
+        <item>family</item>
+        <item>shopping</item>
+    </string-array>
+    <string-array name="TaskPriorities">
+        <item>Very High</item>
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+    <string name="shared_user_label">de.ruschival</string>
+</resources>

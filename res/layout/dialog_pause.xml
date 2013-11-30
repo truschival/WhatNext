@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialogText"
+        style="@style/WindowTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/s_question_pause_save" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/taskName"
+        style="@style/TaskName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogText"
+        android:text="@string/sl_timediff" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/actualLabel"
+        style="@style/EditLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/actual"
+        android:layout_alignParentLeft="true"
+        android:text="@string/sl_timediff" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/actual"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taskName"
+        android:layout_toRightOf="@+id/progLabel"
+        android:gravity="right"
+        android:inputType="numberDecimal"
+        android:maxLength="6" >
+    </EditText>
+
+    <ImageView
+        android:id="@+id/progSep"
+        style="@style/Separator"
+        android:layout_below="@+id/actual"
+        android:contentDescription="@string/separator"
+        android:src="@android:drawable/divider_horizontal_dim_dark" />
+
+    <TextView
+        android:id="@+id/progLabel"
+        style="@style/EditLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/progSep"
+        android:text="@string/sl_progress_long" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/progress"
+        style="@style/EditLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progSep"
+        android:layout_toRightOf="@+id/progLabel" >
+    </TextView>
+
+    <SeekBar
+        android:id="@+id/progSeek"
+        style="@style/SeekBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/progLabel" >
+    </SeekBar>
+
+    <ImageView
+        android:id="@+id/buttonSep"
+        style="@style/Separator"
+        android:layout_below="@+id/progSeek"
+        android:contentDescription="@string/separator"
+        android:src="@android:drawable/divider_horizontal_dim_dark" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSep"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/pauseSaveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:text="@string/sa_pause_save" >
+
+            <requestFocus />
+        </Button>
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sa_continue" >
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

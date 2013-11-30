@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/categoryBtn"
+        style="@style/EditLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_toLeftOf="@+id/newTaskBtn"
+        android:ellipsize="middle"
+        android:saveEnabled="true"
+        android:text="@string/sa_choose_categories"
+        android:textColor="@color/black" >
+    </Button>
+
+    <ImageButton
+        android:id="@+id/newTaskBtn"
+        style="@style/PlusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/sa_new_task" >
+    </ImageButton>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/categoryBtn" >
+    </ListView>
+
+</RelativeLayout>

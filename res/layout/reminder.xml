@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp" >
+
+    <TextView
+        android:id="@+id/timeLabel"
+        style="@style/ValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timeUnitsLabel"
+        android:layout_alignParentLeft="true"
+        android:gravity="left|center" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/timeUnitsLabel"
+        style="@style/ValueText"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@+id/deleteReminderBtn"
+        android:layout_toRightOf="@+id/timeLabel"
+        android:gravity="left|center" >
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/deleteReminderBtn"
+        style="@style/MinusButton"
+        android:contentDescription="@string/sa_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" >
+    </ImageButton>
+
+</RelativeLayout>

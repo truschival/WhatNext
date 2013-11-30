@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/timeDelta"
+        style="@style/EditText"
+        android:layout_width="65sp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10sp"
+        android:layout_marginLeft="5sp"
+        android:gravity="right|center"
+        android:inputType="number"
+        android:maxLength="6"
+        android:paddingRight="-5sp"
+        android:text="@integer/default_reminder_time" >
+    </EditText>
+
+    <Spinner
+        android:id="@+id/timeUnitSpin"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/timeDelta"
+        android:layout_toLeftOf="@+id/newReminderBtn"
+        android:layout_toRightOf="@+id/timeDelta"
+        android:entries="@array/TimeUnits" >
+    </Spinner>
+
+    <ImageButton
+        android:id="@+id/newReminderBtn"
+        style="@style/PlusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/sa_new" >
+    </ImageButton>
+
+</RelativeLayout>

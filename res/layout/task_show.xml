@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbackground" >
+
+    <TextView
+        android:id="@+id/taskName"
+        style="@style/WindowTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="4dp"
+        android:layout_toLeftOf="@+id/taskStateBtn" />
+
+    <ImageButton
+        android:id="@+id/taskStateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/sl_start"
+        android:padding="2dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/buttonbackground"
+        android:scaleType="centerInside"
+        android:src="@drawable/play" >
+    </ImageButton>
+
+    <ImageView
+        android:id="@+id/separator1"
+        style="@style/Separator"
+        android:layout_below="@+id/taskStateBtn"
+        android:contentDescription="@string/separator"
+        android:src="@android:drawable/divider_horizontal_dim_dark" />
+
+    <TextView
+        android:id="@+id/startLabel"
+        style="@style/EditLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/separator1"
+        android:text="@string/sl_start" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/startDateTime"
+        style="@style/ValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/startLabel"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp" >
+    </TextView>
+
+    <TextView
+        android:id="@id/dueLabel"
+        style="@style/EditLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/startLabel"
+        android:text="@string/sl_due" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/dueDateTime"
+        style="@style/ValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/dueLabel"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp" >
+    </TextView>
+
+    <!-- Progress -->
+
+    <TextView
+        android:id="@+id/progressLabel"
+        style="@style/EditLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/dueLabel"
+        android:text="@string/sl_progress_short" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/progress"
+        style="@style/ValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/progressLabel"
+        android:layout_toLeftOf="@+id/startDateTime"
+        android:paddingRight="25sp" >
+    </TextView>
+    <!-- WCET/ACTUAL -->
+
+    <TextView
+        android:id="@id/wcetLabel"
+        style="@style/EditLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/progressLabel"
+        android:text="@string/sl_estimated" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/wcet"
+        style="@style/ValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/wcetLabel"
+        android:layout_alignLeft="@+id/progress"
+        android:paddingRight="25sp" >
+    </TextView>
+
+    <TextView
+        android:id="@id/actualLabel"
+        style="@style/EditLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/wcetLabel"
+        android:layout_toLeftOf="@+id/actual"
+        android:text="@string/sl_actual" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/actual"
+        style="@style/ValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/wcetLabel"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp" >
+    </TextView>
+
+    <ImageView
+        android:id="@id/separator2"
+        style="@style/Separator"
+        android:layout_below="@id/wcetLabel"
+        android:contentDescription="@string/separator"
+        android:src="@android:drawable/divider_horizontal_dim_dark" />
+
+    <!-- Categories -->
+
+    <TextView
+        android:id="@id/categoryLabel"
+        style="@style/EditLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/separator2"
+        android:text="@string/sl_category" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/categories"
+        style="@style/ValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/categoryLabel"
+        android:layout_alignLeft="@+id/progress"
+        android:layout_alignParentRight="true"
+        android:ellipsize="end"
+        android:paddingRight="10sp" >
+    </TextView>
+
+    <!-- Priority -->
+
+    <TextView
+        android:id="@id/prioLabel"
+        style="@style/EditLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/categoryLabel"
+        android:text="@string/sl_prio" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/prio"
+        style="@style/ValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/prioLabel"
+        android:layout_alignLeft="@+id/progress"
+        android:paddingRight="25sp" >
+    </TextView>
+
+    <TextView
+        android:id="@id/locationLabel"
+        style="@style/EditLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/prioLabel"
+        android:text="@string/sl_loc" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/location"
+        style="@style/ValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/locationLabel"
+        android:layout_alignLeft="@+id/progress"
+        android:ellipsize="end" >
+    </TextView>
+
+    <ImageView
+        android:id="@id/separator3"
+        style="@style/Separator"
+        android:layout_below="@id/locationLabel"
+        android:contentDescription="@string/separator"
+        android:src="@android:drawable/divider_horizontal_dim_dark" />
+
+    <TextView
+        android:id="@+id/taskDesc"
+        style="@style/ValueText"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/backBtn"
+        android:layout_below="@id/separator3" >
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/sa_to_list"
+        android:gravity="center_vertical|center_horizontal"
+        android:src="@drawable/ic_menu_agenda"
+        android:visibility="gone" />
+
+</RelativeLayout>

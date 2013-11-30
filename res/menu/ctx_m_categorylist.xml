@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/ctxi_edit"
+        android:title="@string/sa_edit_category"></item>
+
+    <item
+        android:id="@+id/ctxi_delete"
+        android:title="@string/sa_delete"></item>
+
+</menu>

@@ -1,0 +1,9 @@
+Beschreibung
+WatNext ist eine übersichtliche Aufgabenliste (Todo Liste), die Ihnen hilft den Überblick über Ihre Aufgaben zu behalten.
+Es hat was viele To-do-Listen bieten aber versucht weniger genutzte Funktionen zu verstecken.
+Die wichtigsten Features:
+- Zeiterfassung zur Selbstkontrolle und bessere Abschätzung. Misst die tatsächlich benötigte Zeit.
+- Dynamische Verwaltung auf "Least Laxity Scheduling" Basis. Erledigen Sie die dringendsten Aufgaben zuerst!
+- Selbst wenn Sie eine Deadline vergessen sollten, WhatNext erinnert Sie daran!
+- Teilen sie Ihre Aufgaben. WhatNext exportiert RFC5545 konformen iCalendar als VEVENT oder VTODO
+- Organisieren von Aufgaben in Kategorien - filtern und gruppieren Sie Ihre Aufgaben.

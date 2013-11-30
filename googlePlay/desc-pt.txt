@@ -1,0 +1,12 @@
+Descrição
+WhatNext é um simples lista de tarefas (to-do) embora não simples demais que ajuda você a manter o controle sobre seus compromissos.
+Ele apresenta o que a maioria dos outros programas deste tipo também oferece, mas tenta esconder os recursos menos utilizados.
+Funcionalidades principais:
+- Controle e rastreamento de tempo. Mede o tempo gasto em cada tarefa!
+- Programação dinâmica com base em "Least Laxity Scheduling". Toma conta das tarefas mais urgentes primeiros
+- WhatNext informa se seus pressupostos pode ser cumprida
+- Lembretes - Mesmo se você esquecer um prazo, WhatNext irá mantê-lo consciente!
+- Compartilhe suas tarefas - RFC5545 exportações compatíveis com iCalendar como VEVENT ou VTODO
+- Organizar as tarefas em categorias - filtro e seu grupo tarefa
+
+Se você sentir que você definitivamente precisa de algum recurso, por favor me passe um e-mail e eu vou pensar nisso.
